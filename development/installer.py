@@ -175,7 +175,7 @@ def init_bench_if_not_exist(args):
             cwd=os.getcwd() + "/" + args.bench_name,
         )
         cprint(
-            "Set redis_socketio to redis://redis-queue:6379 for backward compatibility",  # noqa: E501
+            "Set redis_socketio to redis://redis-socketio:6379 for backward compatibility",  # noqa: E501
             level=3,
         )
         subprocess.call(
@@ -184,7 +184,7 @@ def init_bench_if_not_exist(args):
                 "set-config",
                 "-g",
                 "redis_socketio",
-                "redis://redis-queue:6379",
+                "redis://redis-socketio:6379",
             ],
             cwd=os.getcwd() + "/" + args.bench_name,
         )
